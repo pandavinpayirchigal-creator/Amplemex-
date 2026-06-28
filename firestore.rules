@@ -1,0 +1,30 @@
+// Collection: products
+{
+  id: "prod_001",
+  name: "Premium Wireless Headphones",
+  category: "audio",
+  price: 129.99,
+  rating: 4.8,
+  stock: 45,
+  images: ["gs://amplemex.appspot.com/products/p1_1.jpg"],
+  specs: { battery: "40h", ANC: true },
+  reviews: [{ userId: "uid_123", user: "Alex", rating: 5, text: "Insane clarity!" }]
+}
+
+// Collection: conversations
+{
+  chatId: "chat_uid_123",
+  userId: "uid_123",
+  typingStatus: { customer: false, admin: true },
+  lastMessage: "Order request sent.",
+  messages: [
+    {
+      senderId: "uid_123",
+      text: "Can I get a discount on this?",
+      timestamp: Timestamp,
+      type: "text", // text, image, product_card
+      metadata: { productId: "prod_001" },
+      status: "read" // sent, delivered, read
+    }
+  ]
+}
