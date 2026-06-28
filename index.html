@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amplemex | Premium E-Commerce Experience</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for Premium Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Premium Glass Header -->
+    <header class="glass-nav">
+        <div class="logo">AMPLENEX</div>
+        <div class="search-bar-container">
+            <input type="text" id="global-search" placeholder="Search premium products...">
+            <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <nav class="nav-links">
+            <a href="#" class="active">Home</a>
+            <a href="#" id="wishlist-trigger"><i class="fa-regular fa-heart"></i> <span id="wishlist-count">0</span></a>
+            <a href="#" id="cart-trigger"><i class="fa-solid fa-bag-shopping"></i> <span id="cart-count">0</span></a>
+            <a href="#" id="chat-toggle"><i class="fa-regular fa-comment-dots"></i></a>
+            <button id="auth-btn" class="btn-primary">Login</button>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- Sidebar Filters -->
+        <aside class="glass-sidebar">
+            <h3>Filters</h3>
+            <div class="filter-group">
+                <label>Category</label>
+                <select id="category-filter">
+                    <option value="all">All Categories</option>
+                    <option value="electronics">Electronics</option>
+                    <option value="apparel">Premium Apparel</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Price Range</label>
+                <input type="range" id="price-filter" min="0" max="2000" value="2000">
+                <span id="price-val">$2000</span>
+            </div>
+        </aside>
+
+        <!-- Product Grid Dynamic Wrapper -->
+        <section class="products-wrapper">
+            <div class="sort-bar">
+                <p><span id="product-count">0</span> Products Found</p>
+                <select id="sort-select">
+                    <option value="featured">Featured</option>
+                    <option value="low-high">Price: Low to High</option>
+                    <option value="high-low">Price: High to Low</option>
+                </select>
+            </div>
+            <div class="product-grid" id="main-product-grid">
+                <!-- JavaScript populates product cards here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Firebase SDKs Configuration -->
+    <script type="module" src="app.js"></script>
+</body>
+</html>
